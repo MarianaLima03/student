@@ -11,7 +11,7 @@ public class EstudanteModel {
     private Long id;
     @Column(name="name")
     private String nome;
-    private String emai;
+    private String email;
     @Column(name="age")
     private Integer idade;
 
@@ -31,12 +31,12 @@ public class EstudanteModel {
         this.nome = nome;
     }
 
-    public String getEmai() {
-        return emai;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmai(String emai) {
-        this.emai = emai;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getIdade() {

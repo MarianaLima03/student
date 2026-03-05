@@ -27,4 +27,18 @@ public class EstudanteService {
     public void deletarEstudante(Long id){
         estudanteRepository.deleteById(id);
     }
+
+     //public EstudanteModel buscaPoiD(Long id){
+     //   return estudanteRepository.findById(id).get();
+    //   }
+    //   OUTRO JEITO DE FAZER O BUSCAR ID(JEITO ERRADO)
+
+    public EstudanteModel atualizarEstudante(Long id, EstudanteModel estudanteModel){
+        EstudanteModel model = estudanteRepository.findById(id).get();
+        model.setNome(estudanteModel.getNome());
+        model.setEmail(estudanteModel.getEmail());
+        model.setIdade(estudanteModel.getIdade());
+        return estudanteRepository.save(model);
+    }
+    //optional ele salva
 }
